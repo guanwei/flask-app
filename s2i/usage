@@ -1,0 +1,10 @@
+#!/bin/sh
+cat <<EOF
+This is a S2I python base image
+sample:
+code file directory:
+- requirements.txt # list python package to be installed
+- app.py # python app.py to run the application
+to create buildconfig with oc command:
+oc new-build python:slim-s2i-https://github.com/sample/python-app.git#master --name=testapp-s2i
+EOF
